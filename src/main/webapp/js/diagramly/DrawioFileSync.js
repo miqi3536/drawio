@@ -305,6 +305,12 @@ DrawioFileSync.prototype.isConnected = function()
  */
 DrawioFileSync.prototype.updateOnlineState = function()
 {
+	//For RT in embeded mode, we don't need this icon
+	if (urlParams['embedRT'] == '1')
+	{
+		return;
+	}
+	
 	var addClickHandler = mxUtils.bind(this, function(elt)
 	{
 		mxEvent.addListener(elt, 'click', mxUtils.bind(this, function(evt)
@@ -848,7 +854,7 @@ DrawioFileSync.prototype.catchup = function(desc, success, error, abort)
 											}
 											// Retries if cache entry was not yet there
 											else if (cacheReadyRetryCount <= this.maxCacheReadyRetries - 1 &&
-												!failed && req.getStatus() != 401)
+												!failed && req.getStatus() != 401 && req.getStatus() != 503)
 											{
 												cacheReadyRetryCount++;
 												this.file.stats.cacheMiss++;

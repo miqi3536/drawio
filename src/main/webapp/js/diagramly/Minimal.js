@@ -499,19 +499,23 @@ EditorUi.initMinimalTheme = function()
 				}
 			}
 
-			button = document.createElement('a');
-			mxUtils.write(button, mxResources.get('exit'));
-			button.setAttribute('title', mxResources.get('exit'));
-			button.className = 'geMenuItem';
-			button.style.marginLeft = '6px';
-			button.style.padding = '6px';
-			
-			mxEvent.addListener(button, 'click', mxUtils.bind(this, function()
+			if (urlParams['noExitBtn'] != '1')
 			{
-				this.actions.get('exit').funct();
-			}));
+				button = document.createElement('a');
+				mxUtils.write(button, mxResources.get('exit'));
+				button.setAttribute('title', mxResources.get('exit'));
+				button.className = 'geMenuItem';
+				button.style.marginLeft = '6px';
+				button.style.padding = '6px';
+				
+				mxEvent.addListener(button, 'click', mxUtils.bind(this, function()
+				{
+					this.actions.get('exit').funct();
+				}));
+				
+				div.appendChild(button);
+			}
 			
-			div.appendChild(button);
 			this.buttonContainer.appendChild(div);
 			this.buttonContainer.style.top = '6px';
 		}
@@ -750,14 +754,8 @@ EditorUi.initMinimalTheme = function()
 			
 			if (mxClient.IS_CHROMEAPP || EditorUi.isElectronApp)
 			{
-				ui.menus.addMenuItems(menu, ['new', 'open', '-'], parent);
-				
-				if (EditorUi.isElectronApp)
-				{
-					ui.menus.addMenuItems(menu, ['synchronize', '-'], parent);
-				}
-				
-				ui.menus.addMenuItems(menu, ['save', 'saveAs', '-'], parent);
+				ui.menus.addMenuItems(menu, ['new', 'open', '-', 'synchronize',
+					'-', 'save', 'saveAs', '-'], parent);
 			}
 			else if (urlParams['embed'] == '1')
 			{

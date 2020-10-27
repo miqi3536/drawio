@@ -17,8 +17,9 @@ window.isSvgBrowser = window.isSvgBrowser || navigator.userAgent == null ||
 	navigator.userAgent.indexOf('MSIE') < 0 || document.documentMode >= 9;
 
 // CUSTOM_PARAMETERS - URLs for save and export
-window.DRAWIO_BASE_URL = window.DRAWIO_BASE_URL || ((/.*\.draw\.io$/.test(window.location.hostname)) ?
+window.DRAWIO_BASE_URL = window.DRAWIO_BASE_URL || ((/.*\.draw\.io$/.test(window.location.hostname)) || (/.*\.diagrams\.net$/.test(window.location.hostname)) ?
 	window.location.protocol + '//' + window.location.hostname : 'https://app.diagrams.net');
+window.DRAWIO_LIGHTBOX_URL = window.DRAWIO_LIGHTBOX_URL || 'https://viewer.diagrams.net';
 window.EXPORT_URL = window.EXPORT_URL || 'https://exp.draw.io/ImageExport4/export';
 window.PLANT_URL = window.PLANT_URL || 'https://plant-aws.diagrams.net';
 window.DRAW_MATH_URL = window.DRAW_MATH_URL || window.DRAWIO_BASE_URL + '/math';
@@ -75,6 +76,23 @@ window.mxLanguage = window.mxLanguage || (function()
 				{
 					lang = JSON.parse(value).language || null;
 				}
+				
+				if (!lang && window.mxIsElectron)
+				{
+					lang = require('electron').remote.app.getLocale();
+					
+					if (lang != null)
+			    	{
+			    		var dash = lang.indexOf('-');
+			    		
+			    		if (dash >= 0)
+			    		{
+			    			lang = lang.substring(0, dash);
+			    		}
+			    		
+			    		lang = lang.toLowerCase();
+			    	}
+				}
 			}
 			catch (e)
 			{
@@ -104,7 +122,7 @@ window.mxLanguageMap = window.mxLanguageMap ||
 	'et' : 'Eesti',
 	'en' : 'English',
 	'es' : 'Español',
-	'eu' : 'Euskadi',
+	'eu' : 'Euskara',
 	'fil' : 'Filipino',
 	'fr' : 'Français',
 	'gl' : 'Galego',
@@ -331,17 +349,23 @@ if (urlParams['offline'] == '1' || urlParams['demo'] == '1' || urlParams['stealt
 	urlParams['tr'] = '0';
 }
 
+// Disables math in offline mode
+if (urlParams['offline'] == '1' || urlParams['local'] == '1')
+{
+	urlParams['math'] = '0';
+}
+
 // Uses embed mode on embed domain
 if (window.location.hostname == 'embed.diagrams.net')
 {
 	urlParams['embed'] = '1';
 }	
 
-// Disables math in offline mode
-if (urlParams['offline'] == '1' || urlParams['local'] == '1')
+// Uses lightbox mode on viewer domain
+if (window.location.hostname == DRAWIO_LIGHTBOX_URL.substring(DRAWIO_LIGHTBOX_URL.indexOf('//') + 2))
 {
-	urlParams['math'] = '0';
-}
+	urlParams['lightbox'] = '1';
+}	
 
 // Lightbox enables chromeless mode
 if (urlParams['lightbox'] == '1')

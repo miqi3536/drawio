@@ -1,3 +1,280 @@
+26-OCT_2020: 13.8.3
+
+- Gliffy import improvements
+- Updates Spanish translations
+
+
+24-OCT-2020: 13.8.2
+
+- Lucidchart import improvements
+- Fixes ungrouping action
+- Uses mxGraph 4.2.1 beta 22
+
+20-OCT-2020: 13.8.1
+
+- Lucidchart import improvements
+- Gliffy import improvements
+- Uses mxGraph 4.2.1 beta 21
+
+14-OCT-2020: 13.8.0
+
+- App Engine configuration changes
+- Uses mxGraph 4.2.1 beta 20
+
+08-OCT-2020: 13.7.9
+
+- Fixes script load order for electron
+
+07-OCT-2020: 13.7.8
+
+- Uses mxGraph 4.2.1 beta 19
+- Uses MathJax 2.7.9
+
+30-SEP-2020: 13.7.7
+
+- Updates Finnish translations, credit Arttu Ylhävuori, github.com/areee
+- Updates native File API tokens
+- Lucidchart import improvements
+- Fixes gradient issues in FF
+- Uses mxGraph 4.2.1 beta 18
+
+28-SEP-2020: 13.7.6
+
+- Updates Azure icons
+
+23-SEP-2020: 13.7.5
+
+- Removes document.write for modern browsers
+
+22-SEP-2020: 13.7.4
+
+- Appends splash dialog libs to configured libs
+
+17-SEP-2020: 13.7.3
+
+- Moves viewer to viewer.diagrams.net
+- Improves shape picker position
+- Uses mxGraph 4.2.1 beta 17
+
+16-SEP-2020: 13.7.2
+
+- Removes PWA on draw.io domains
+
+14-SEP-2020: 13.7.1
+
+- Improves Gliffy import
+
+14-SEP-2020: 13.7.0
+
+- Adds conf cloud change notifications for collab
+- Adds Cmd+Click for blue arrow on macOS
+- Uses mxGraph 4.2.1 beta 17
+
+11-SEP-2020: 13.6.10
+
+- Adds Shift+Delete/Backsapce to clear labels
+- Uses mxGraph 4.2.1 beta 16
+
+08-SEP-2020: 13.6.9
+
+- Fixes inline images in cell styles
+
+08-SEP-2020: 13.6.8
+
+- Fixes use of unsupported function in IE
+
+08-SEP-2020: 13.6.7
+
+- Normalizes spaces in uncompressed XML output
+- Adds context menu for shape search results
+- Minor fixes for custom fonts
+- Uses mxGraph 4.2.1 beta 15
+
+31-AUG-2020: 13.6.6
+
+- Removes PWA for www.draw.io
+- Improves Gliffy import
+
+24-AUG-2020: 13.6.5
+
+- Corrects classpath for CacheFacade
+
+20-AUG-2020: 13.6.4
+
+- Adds Shift/Ctrl+Cursor to move/select pages
+- Fixes orientation of screen page formats
+- Adds allowZoomOut switch in GraphViewer
+
+18-AUG-2020: 13.6.3
+
+- Handles extra HTML content on Sharepoint
+- Fixes origin after folding in viewer
+
+08-AUG-2020: 13.6.2
+
+- Fixes origin for online PDF export
+
+07-AUG-2020: 13.6.1
+
+- Improves Lucidchart importer
+- GAE stub fixes
+
+05-AUG-2020: 13.6.0
+
+- Uses mxGraph 4.2.1 beta 14
+- Fixes mouse zoom bug
+
+03-AUG-2020: 13.5.9
+
+- Adds pinch to zoom on Windows and Android
+- Uses mxGraph 4.2.1 beta 13
+
+31-JUL-2020: 13.5.8
+
+- Fixes tooltip for rotation handle
+- Fixes edit as blank in lightbox
+- Lucidchart import improvements
+- Uses mxGraph 4.2.1 beta 12
+- Improves shape picker
+
+30-JUL-2020: 13.5.7
+
+- Faster autosave in Google Drive
+
+30-JUL-2020: 13.5.6
+
+- Uses mxGraph 4.2.1 beta 11
+- Performance improvements
+
+29-JUL-2020: 13.5.5
+
+- Uses mxGraph 4.2.1 beta 10
+- Enables links in tooltips
+- Adds layout JSON action
+
+28-JUL-2020: 13.5.4
+
+- Adds handle for cube and cylinder shape
+- Adds metadata to C4 shapes
+- Uses mxGraph 4.2.1 beta 9
+
+24-JUL-2020: 13.5.3
+
+- Fixes print in static viewer
+
+24-JUL-2020: 13.5.2
+
+- Fixes viewer links
+- Uses mxGraph 4.2.1 beta 8
+
+22-JUL-2020: 13.5.1
+
+- Removes official Azure icons for licensing reasons
+
+22-JUL-2020: 13.5.0
+
+- Restores cloning of rows with blue arrows
+- Fixes ungroup for multiple groups
+- Uses mxGraph 4.2.1 beta 7
+
+20-JUL-2020: 13.4.9
+
+- Fixes handling of built-in plugins
+- Uses mxGraph 4.2.1 beta 6
+
+19-JUL-2020: 13.4.8
+
+- Fixes SHA for inline script
+
+19-JUL-2020: 13.4.7
+
+- Improves target detection for blue arrows
+- Improves shape selection on touch devices
+- Uses mxGraph 4.2.1 beta 5
+
+17-JUL-2020: 13.4.6
+
+- Simplified Start Screen
+
+16-JUL-2020: 13.4.5
+
+- Fixes ignored right meta key on macOS
+
+15-JUL-2020: 13.4.4
+
+- Fixes shape picker container insert
+- Adds diagram styles
+
+14-JUL-2020: 13.4.3
+
+- Adds shape selection on blue arrow click
+
+10-JUL-2020: 13.4.2
+
+- Adds shape selection on double click
+- Fixes browser storage dialog
+
+09-JUL-2020: 13.4.1
+
+- Disables eval in HTML embed code
+
+08-JUL-2020: 13.4.0
+
+- Adds border for lightbox export
+- Uses mxGraph 4.2.1 beta 4
+- Adds Diagram Style panel
+
+04-JUL-2020: 13.3.9
+
+- Fixes ignored autosave for native files
+
+03-JUL-2020: 13.3.8
+
+- Adds experimental file system support
+
+02-JUL-2020: 13.3.7
+
+- Fixes image export with sketch style
+- Uses mxGraph 4.2.1 beta 3
+
+01-JUL-2020: 13.3.6
+
+- Fixes transparent background event handling for sketch style
+- Moves row for dragging selected table cell
+- Fixes inconsistent cursors for tables
+- Adds drag and drop for tables
+- Uses mxGraph 4.2.1 beta 2
+- Adds new basic templates
+- Adds rows in ER sidebar
+- Adds edit dialog style
+
+25-JUN-2020: 13.3.5
+
+- Fixes minor bugs
+
+24-JUN-2020: 13.3.4
+
+- Fixes minor bugs
+
+24-JUN-2020: 13.3.3
+
+- Fixes move for tables with selected rows
+- Fixes flex arrow custom handle preview
+- Fixes ignored zoom for step perimeter
+- Uses mxGraph 4.2.1 beta 1
+
+24-JUN-2020: 13.3.2
+
+- Fixes sketch style for partial rectangles
+- No longer replaces comic style
+
+23-JUN-2020: 13.3.1
+
+- Adds rough style and URL parameter
+- Adds support for viewbox in link actions
+- Adds hide-pages, viewbox URL parameters
+- Uses mxGraph 4.2.1
+
 19-JUN-2020: 13.3.0
 
 - Adds ok for prompt JSON message
